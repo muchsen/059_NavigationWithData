@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
@@ -70,6 +71,15 @@ fun CustomerDetailsScreen(
         ) {
             OutlinedButton(onClick = onCancelButtonClicked) {
                 Text(text = "Cancel")
+            }
+            Button(
+                onClick = {
+                    if (namaPelanggan.isNotEmpty() && nomorTelepon.isNotEmpty() && alamat.isNotEmpty()) {
+                        onConfirmButtonClicked(namaPelanggan, nomorTelepon, alamat)
+                    }
+                }
+            ) {
+                Text(text = "Next")
             }
         }
     }
