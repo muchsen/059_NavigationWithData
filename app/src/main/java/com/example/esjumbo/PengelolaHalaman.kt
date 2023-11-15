@@ -1,5 +1,4 @@
-@file:OptIn (ExperimentalMaterial3Api::class,
-    ExperimentalMaterial3Api::class)
+
 package com.example.esjumbo
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons. Icons
@@ -60,6 +59,7 @@ fun EsJumboAppBar(
     )
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EsJumboApp(
     viewModel: OrderViewModel = viewModel(),
